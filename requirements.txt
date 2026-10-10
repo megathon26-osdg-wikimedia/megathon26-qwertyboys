@@ -1,0 +1,11 @@
+# Install PyTorch FIRST (CPU build is fine):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+transformers
+pillow
+numpy
+requests
+tqdm
+faiss-cpu
+scikit-learn
+joblib
+gradio
