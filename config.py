@@ -19,7 +19,7 @@ SEEDS = ["Taj Mahal", "Charminar", "Eiffel Tower", "Cats", "Dogs", "Sunsets", "M
          "Forests", "Volcanoes", "Mushrooms", "Spiders", "Football", "Libraries"]
 
 # ---------------- Stage 2: label cleaning + splits (change => re-run 2..6) ----------------
-N_MIN = 8                       # min TRAIN images for a category to enter the vocabulary
+N_MIN = 20                       # min TRAIN images for a category to enter the vocabulary
 TRAIN_FRAC, VAL_FRAC = 0.70, 0.10   # the remaining 20% (latest uploads) is the TEST set
 DEDUP_THRESH = 0.97             # cosine vs. train above this => near-duplicate, removed from val/test
 MAINT_PATTERNS = [              # regexes (case-insensitive) for process/licence/author categories
@@ -62,3 +62,75 @@ SEEDS += ["Birds", "Fish", "Flowers", "Fruit", "Vegetables", "Bread", "Coffee", 
           "Festivals", "Dances", "Traditional clothing", "Insects", "Frogs", "Snakes",
           "Monkeys", "Bears", "Deer", "Tigers", "Lions", "Trees", "Rainbows", "Fog",
           "Qutub Minar", "Golconda Fort", "Red Fort"]
+
+# ---- extra seeds (v6): different domains ----
+_NEW = ["Samosas", "Biryani", "Tea", "Rice", "Spices", "Chocolate", "Ice cream", "Cheese",
+        "Wine", "Beer", "Noodles", "Salads", "Soups", "Burgers", "Cricket stadiums", "Chess",
+        "Swimming", "Skiing", "Boxing", "Wrestling", "Golf", "Rugby", "Baseball", "Horse racing",
+        "Violins", "Pianos", "Drums", "Flutes", "Clocks", "Watches", "Chairs", "Lamps",
+        "Telescopes", "Microscopes", "Computers", "Mobile phones", "Robots", "Satellites",
+        "Rockets", "Ships", "Submarines", "Ferries", "Rickshaws", "Scooters", "Ambulances",
+        "Fire engines", "Tanks", "Bridges in India", "Gates", "Towers", "Domes", "Arches",
+        "Stained glass", "Mosaics", "Graffiti", "Pottery", "Textiles", "Jewellery", "Masks",
+        "Weddings", "Parades", "Protests", "Markets in India", "Temples in Hyderabad",
+        "Rangoli", "Kites", "Balloons", "Ponds", "Swamps", "Hot springs", "Geysers",
+        "Rice fields", "Vineyards", "Tea plantations", "Orchards", "Meadows", "Autumn leaves",
+        "Cherry blossoms", "Sunflowers", "Orchids", "Lotus", "Cacti", "Ferns", "Moss",
+        "Crabs", "Jellyfish", "Sharks", "Dolphins", "Whales", "Penguins", "Peacocks",
+        "Parrots", "Eagles", "Ducks", "Goats", "Sheep", "Camels", "Giraffes", "Zebras",
+        "Pandas", "Wolves", "Foxes", "Rabbits", "Squirrels", "Bees", "Ants"]
+SEEDS += [s for s in _NEW if s not in SEEDS]
+
+# ---- extra seeds (v6): different domains ----
+_NEW = ["Samosas", "Biryani", "Tea", "Rice", "Spices", "Chocolate", "Ice cream", "Cheese",
+        "Wine", "Beer", "Noodles", "Salads", "Soups", "Burgers", "Cricket stadiums", "Chess",
+        "Swimming", "Skiing", "Boxing", "Wrestling", "Golf", "Rugby", "Baseball", "Horse racing",
+        "Violins", "Pianos", "Drums", "Flutes", "Clocks", "Watches", "Chairs", "Lamps",
+        "Telescopes", "Microscopes", "Computers", "Mobile phones", "Robots", "Satellites",
+        "Rockets", "Ships", "Submarines", "Ferries", "Rickshaws", "Scooters", "Ambulances",
+        "Fire engines", "Tanks", "Bridges in India", "Gates", "Towers", "Domes", "Arches",
+        "Stained glass", "Mosaics", "Graffiti", "Pottery", "Textiles", "Jewellery", "Masks",
+        "Weddings", "Parades", "Protests", "Markets in India", "Temples in Hyderabad",
+        "Rangoli", "Kites", "Balloons", "Ponds", "Swamps", "Hot springs", "Geysers",
+        "Rice fields", "Vineyards", "Tea plantations", "Orchards", "Meadows", "Autumn leaves",
+        "Cherry blossoms", "Sunflowers", "Orchids", "Lotus", "Cacti", "Ferns", "Moss",
+        "Crabs", "Jellyfish", "Sharks", "Dolphins", "Whales", "Penguins", "Peacocks",
+        "Parrots", "Eagles", "Ducks", "Goats", "Sheep", "Camels", "Giraffes", "Zebras",
+        "Pandas", "Wolves", "Foxes", "Rabbits", "Squirrels", "Bees", "Ants"]
+SEEDS += [s for s in _NEW if s not in SEEDS]
+
+# ---- extra seeds (v6): different domains ----
+_NEW = ["Samosas", "Biryani", "Tea", "Rice", "Spices", "Chocolate", "Ice cream", "Cheese",
+        "Wine", "Beer", "Noodles", "Salads", "Soups", "Burgers", "Cricket stadiums", "Chess",
+        "Swimming", "Skiing", "Boxing", "Wrestling", "Golf", "Rugby", "Baseball", "Horse racing",
+        "Violins", "Pianos", "Drums", "Flutes", "Clocks", "Watches", "Chairs", "Lamps",
+        "Telescopes", "Microscopes", "Computers", "Mobile phones", "Robots", "Satellites",
+        "Rockets", "Ships", "Submarines", "Ferries", "Rickshaws", "Scooters", "Ambulances",
+        "Fire engines", "Tanks", "Bridges in India", "Gates", "Towers", "Domes", "Arches",
+        "Stained glass", "Mosaics", "Graffiti", "Pottery", "Textiles", "Jewellery", "Masks",
+        "Weddings", "Parades", "Protests", "Markets in India", "Temples in Hyderabad",
+        "Rangoli", "Kites", "Balloons", "Ponds", "Swamps", "Hot springs", "Geysers",
+        "Rice fields", "Vineyards", "Tea plantations", "Orchards", "Meadows", "Autumn leaves",
+        "Cherry blossoms", "Sunflowers", "Orchids", "Lotus", "Cacti", "Ferns", "Moss",
+        "Crabs", "Jellyfish", "Sharks", "Dolphins", "Whales", "Penguins", "Peacocks",
+        "Parrots", "Eagles", "Ducks", "Goats", "Sheep", "Camels", "Giraffes", "Zebras",
+        "Pandas", "Wolves", "Foxes", "Rabbits", "Squirrels", "Bees", "Ants"]
+SEEDS += [s for s in _NEW if s not in SEEDS]
+
+# ---- extra seeds (v6): different domains ----
+_NEW = ["Samosas", "Biryani", "Tea", "Rice", "Spices", "Chocolate", "Ice cream", "Cheese",
+        "Wine", "Beer", "Noodles", "Salads", "Soups", "Burgers", "Cricket stadiums", "Chess",
+        "Swimming", "Skiing", "Boxing", "Wrestling", "Golf", "Rugby", "Baseball", "Horse racing",
+        "Violins", "Pianos", "Drums", "Flutes", "Clocks", "Watches", "Chairs", "Lamps",
+        "Telescopes", "Microscopes", "Computers", "Mobile phones", "Robots", "Satellites",
+        "Rockets", "Ships", "Submarines", "Ferries", "Rickshaws", "Scooters", "Ambulances",
+        "Fire engines", "Tanks", "Bridges in India", "Gates", "Towers", "Domes", "Arches",
+        "Stained glass", "Mosaics", "Graffiti", "Pottery", "Textiles", "Jewellery", "Masks",
+        "Weddings", "Parades", "Protests", "Markets in India", "Temples in Hyderabad",
+        "Rangoli", "Kites", "Balloons", "Ponds", "Swamps", "Hot springs", "Geysers",
+        "Rice fields", "Vineyards", "Tea plantations", "Orchards", "Meadows", "Autumn leaves",
+        "Cherry blossoms", "Sunflowers", "Orchids", "Lotus", "Cacti", "Ferns", "Moss",
+        "Crabs", "Jellyfish", "Sharks", "Dolphins", "Whales", "Penguins", "Peacocks",
+        "Parrots", "Eagles", "Ducks", "Goats", "Sheep", "Camels", "Giraffes", "Zebras",
+        "Pandas", "Wolves", "Foxes", "Rabbits", "Squirrels", "Bees", "Ants"]
+SEEDS += [s for s in _NEW if s not in SEEDS]
